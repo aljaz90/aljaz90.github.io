@@ -1,17 +1,148 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 10 | @import "layout/sidebar";
- *    |         ^^^^^^^^^^^^^^^^
- *    '
- *   sass\main.scss 10:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 10 \2502  @import \"layout/sidebar\";\a    \2502          ^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\main.scss 10:9  root stylesheet";
+.u-margin-bottom-sm {
+  margin-bottom: 2rem;
 }
+
+.u-margin-bottom-me {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: 10rem;
+}
+
+.u-margin-none {
+  margin: 0 !important;
+}
+
+.flex--filler {
+  flex-grow: 1;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex--align-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-basis: 0;
+}
+
+.flex--align-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-basis: 0;
+}
+
+.flex--align-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-basis: 0;
+}
+
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 51;
+  filter: blur(4px);
+}
+
+.component-loading {
+  position: relative;
+}
+.component-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  background-image: linear-gradient(to right bottom, #2274A5, #00E8FC);
+}
+.component-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-radius: 50%;
+  animation: loadingComponent 0.3s linear infinite;
+  z-index: 10;
+}
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- small-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 7rem repeat(2, minmax(calc(0.28 * (100vh - 7rem)), min-content)) repeat(2, calc(0.22 * (100vh - 7rem)));
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 112.5em) {
+  .container {
+    grid-template-rows: 7rem repeat(4 calc((100% - 7rem) / 4));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    grid-template-rows: 7rem repeat(4, min-content);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
