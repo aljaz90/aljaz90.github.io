@@ -1,0 +1,26 @@
+{
+  "name": "aljaz90.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass sass/main.scss public/css/main.css -w",
+    "compile:sass": "sass sass/main.scss public/css/style.comp.tmp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.tmp.css -o public/css/style.prefix.tmp.css",
+    "compress:css": "sass public/css/style.prefix.tmp.css public/css/main.css --style compressed",
+    "build": "npm-run-all compile:sass prefix:css compress:css",
+    "start": "npm-run-all --parallel start:server watch:sass",
+    "start:server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aljaz90/aljaz90.github.io.git"
+  },
+  "author": "aljaz90",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aljaz90/aljaz90.github.io/issues"
+  },
+  "homepage": "https://github.com/aljaz90/aljaz90.github.io#readme"
+}
