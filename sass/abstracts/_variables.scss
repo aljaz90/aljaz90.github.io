@@ -1,10 +1,10 @@
-$color-primary:  #2274A5; // #00E8FC #F96E46 #F5D547
+$color-primary:  #00E8FC; // #00E8FC #F96E46 #F5D547
 $color-primary-dark:  darken($color-primary, 10%);
 $color-primary-dark-2:  darken($color-primary, 20%);
 $color-primary-light:  lighten($color-primary, 10%);
 $color-primary-light-2:  lighten($color-primary, 20%);
 
-$color-secondary: #00E8FC;
+$color-secondary: #2274A5;
 $color-secondary-dark:  darken($color-secondary, 10%);
 $color-secondary-dark-2:  darken($color-secondary, 20%);
 $color-secondary-light:  lighten($color-secondary, 10%);
