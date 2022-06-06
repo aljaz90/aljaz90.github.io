@@ -126,14 +126,15 @@ body {
   font-family: "Manrope", sans-serif;
   line-height: 1.6;
   font-weight: 300;
-  background-color: #1B1725;
+  background-color: #001220;
   color: #fff;
 }
 
 .container {
   display: grid;
-  grid-template-rows: [full-start nav-start] 7rem [nav-end content-start] repeat(4, minmax(calc(0.25 * (100vh - 12rem)), min-content)) [content-end footer-start] 5rem [footer-end];
+  grid-template-rows: [full-start content-start] repeat(4, minmax(calc(0.25 * (100vh - 5rem)), min-content)) [content-end footer-start] 5rem [footer-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 112.5em) {
   .container {
@@ -147,8 +148,13 @@ body {
 }
 
 .nav {
-  grid-column: center-start/center-end;
-  grid-row: 1/1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 7rem;
+  width: 100vw;
+  padding: 0 10vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,20 +220,101 @@ body {
 .footer {
   grid-row: footer-start/footer-end;
   grid-column: full-start/full-end;
-  background-color: #100d15;
+  background-color: #000407;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 8rem;
 }
 .footer--section {
   display: flex;
 }
 .footer--section--item {
   font-family: "Sarala", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.5px;
   font-size: 1.6rem;
+  user-select: none;
+}
+.footer--section--item--detail {
+  color: #00E8FC;
+  font-weight: 600;
+}
+
+.home--header {
+  grid-row: content-start/4;
+  grid-column: center-start/center-end;
+  position: relative;
+  padding-top: 20rem;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home--header--introduction {
+  font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  font-size: 9.2rem;
+  border-bottom: 5px solid #00E8FC;
+}
+.home--header--role {
+  font-size: 2.4rem;
+  font-weight: 100;
+  font-family: "Manrope", sans-serif;
+  padding: 1.5rem 1rem;
+}
+.home--header--description {
+  font-size: 2.1rem;
+  padding-left: 1rem;
+  font-size: 500;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.home--header--description--link, .home--header--description--link:link, .home--header--description--link:visited {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  padding: 0.4rem 1.3rem;
+  border: 3px solid #00E8FC;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+}
+.home--header--description--link:hover, .home--header--description--link:link:hover, .home--header--description--link:visited:hover {
+  background-color: #00E8FC;
+}
+.home--links {
+  grid-row: 4/5;
+  grid-column: center-start/center-end;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+.home--links--item {
+  color: #eee;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+}
+.home--links--item:hover {
+  background-color: #eee;
+  transform: translateY(-0.5rem);
+}
+.home--links--item:link, .home--links--item:visited {
+  color: #001220;
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.home--links--item--icon {
+  width: 2rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

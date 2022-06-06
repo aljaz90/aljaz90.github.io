@@ -1,0 +1,12 @@
+.about {
+    grid-row: 1 / 5;
+    grid-column: center-start / center-end;
+    background-color: $color-white;
+    
+    &--header {
+        
+    }
+    &--main {
+
+    }
+}
