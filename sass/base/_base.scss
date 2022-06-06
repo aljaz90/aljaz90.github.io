@@ -29,7 +29,7 @@ body {
  
 .container {
     display: grid;
-    grid-template-rows: 7rem repeat(4, minmax(calc(0.25 * calc(100vh - 7rem)), min-content));
+    grid-template-rows: [full-start nav-start] 7rem [nav-end content-start] repeat(4, minmax(calc(0.25 * calc(100vh - 12rem)), min-content)) [content-end footer-start] 5rem [footer-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
     @include respond(small-desktop) { 

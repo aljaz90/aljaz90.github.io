@@ -12,28 +12,38 @@
 </head>
 <body class="container">
     <header class="nav">
-        <div class="nav--section">
+        <div onclick="handleLogoClick()" class="nav--section">
             <div class="nav--item nav--item-header">
-                <a href="/" class="nav--item--link">
-                    Aljaz Kern
-                </a>
+                Aljaz Kern
+            </div>
+            <div class="nav--item nav--item-header nav--item-header-2">
+                aljaz90
             </div>
         </div>
         <div class="nav--section">
             <div class="nav--item">
-                <a href="/" class="nav--item--link">
+                <a href="/about" class="nav--item--link">
                     About
                 </a>
             </div>
             <div class="nav--item">
-                <a href="/" class="nav--item--link">
+                <a href="/projects" class="nav--item--link">
                     Projects
                 </a>
             </div>
         </div>
     </header>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer--section">
+            <div class="footer--section--item">
+                Made in 2022 by Aljaz Kern
+            </div>
+        </div>
     </footer>
+    <script>
+        function handleLogoClick() {
+            window.location.href = "/";
+        }
+    </script>
 </body>
 </html>

@@ -11,16 +11,36 @@
     }
 
     &--item {
-        //background-color: $color-white;
         padding: 0.75rem 2rem;
         font-size: 2.4rem;
         position: relative;
         font-family: $font-heading;
         font-weight: 300;
-        border-top: 5px solid $color-primary;
+        //border: 3px solid $color-primary;        
 
         &:not(:last-child) {
             margin-right: 1rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            max-height: 100%;
+            height: 0rem;
+            display: block;
+            background-color: $color-primary;
+            transition: height .3s ease-out;
+        }
+
+        &:hover &--link {
+            color: $color-white;
+        }
+        &:hover::after {
+            height: 7rem;
         }
 
         &-header {
@@ -28,12 +48,28 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
+            border-right: 3px solid $color-primary;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover::after {
+               height: 0;
+            }
+
+            &-2 {
+                border: none;
+                letter-spacing: inherit;
+                font-weight: 100;
+                text-transform: none;
+            }
         }
 
 
         &--link, &--link:link, &--link:visited {
             color: $color-primary;
             text-decoration: none;
+            transition: color .3s;
+            user-select: none;
         }
     }
 }

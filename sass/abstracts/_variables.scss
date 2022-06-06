@@ -11,10 +11,10 @@ $color-secondary-light:  lighten($color-secondary, 10%);
 $color-secondary-light-2:  lighten($color-secondary, 20%);
 
 $color-tertiary: #1B1725;
-$color-tertiary-dark:  darken($color-tertiary, 10%);
-$color-tertiary-dark-2:  darken($color-tertiary, 20%);
-$color-tertiary-light:  lighten($color-tertiary, 10%);
-$color-tertiary-light-2:  lighten($color-tertiary, 20%);
+$color-tertiary-dark:  darken($color-tertiary, 5%);
+$color-tertiary-dark-2:  darken($color-tertiary, 10%);
+$color-tertiary-light:  lighten($color-tertiary, 5%);
+$color-tertiary-light-2:  lighten($color-tertiary, 10%);
 
 $color-success: #27C453;
 $color-info: #0076E5;
