@@ -38,11 +38,11 @@
             Projects
         </div>
         <div class="projects--main">
-            <div class="projects--main--project">
+            <div onclick="moveToProject('learnzone.html')" class="projects--main--project">
                 <div class="projects--main--project--status projects--main--project--status-development">
                     In development
                 </div>
-                <img class="projects--main--project--image" src="/public/img/login.png" alt="Project login page">
+                <img class="projects--main--project--image" src="/public/img/lz-home.png" alt="Project login page">
                 <div class="projects--main--project--title">
                     Learnzone
                 </div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projects--main--project">
+            <div onclick="moveToProject('journey.html')" class="projects--main--project">
                 <div class="projects--main--project--status projects--main--project--status-completed">
                     Completed
                 </div>
@@ -94,38 +94,38 @@
                     </div>
                 </div>
             </div>
-            <div class="projects--main--project">
+            <div onclick="moveToProject('cryptomx.html')" class="projects--main--project">
                 <div class="projects--main--project--status projects--main--project--status-completed">
                     Completed
                 </div>
                 <img class="projects--main--project--image" src="/public/img/login.png" alt="Project login page">
                 <div class="projects--main--project--title">
-                    Journey
+                    CryptoMX
                 </div>
                 <div class="projects--main--project--details">
                     <div class="projects--main--project--details--tags">
                         <div class="projects--main--project--details--tags--item">
-                            React
+                            Java
                         </div>
                         <div class="projects--main--project--details--tags--item">
-                            Express.js
+                            JavaFX
                         </div>
                         <div class="projects--main--project--details--tags--item">
-                            Sass
+                            Maven
                         </div>
                     </div>
                     <div class="projects--main--project--details--description">
-                        Journey is a travel advisor that helps you plan or generate a trip in a selected country. 
+                        CryptoMX is a desktop application made with java that allows you to track your crypto portfolio. 
                     </div>
                 </div>
             </div>
-            <div class="projects--main--project">
-                <div class="projects--main--project--status projects--main--project--status-completed">
-                    Completed
+            <div onclick="moveToProject('simple_auth.html')" class="projects--main--project">
+                <div class="projects--main--project--status projects--main--project--status-improvements">
+                    Needs improvements
                 </div>
                 <img class="projects--main--project--image" src="/public/img/login.png" alt="Project login page">
                 <div class="projects--main--project--title">
-                    Journey
+                    Simple Auth
                 </div>
                 <div class="projects--main--project--details">
                     <div class="projects--main--project--details--tags">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="projects--main--project--details--description">
-                        Journey is a travel advisor that helps you plan or generate a trip in a selected country. 
+                        Simple Auth is a project template with premade authentication.
                     </div>
                 </div>
             </div>
@@ -154,6 +154,9 @@
         </div>
     </footer>
     <script>
+        function moveToProject(path) {
+            window.location.href = "/"+path;
+        }
         function handleLogoClick() {
             window.location.href = "/";
         }

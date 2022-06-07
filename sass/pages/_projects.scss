@@ -53,6 +53,9 @@
                 &-development {
                     background-color: $color-success;
                 }
+                &-improvements {
+                    background-color: $color-warning;
+                }
             }
 
             &--image {
