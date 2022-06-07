@@ -11,10 +11,10 @@
     padding: 2rem 5rem;
     
     &--header {
-        color: $color-tertiary-light-2;
+        color: $color-tertiary;
         font-family: $font-heading;
         font-size: 2.8rem;
-        border-bottom: 5px solid $color-primary;
+        border-bottom: 1px solid $color-grey;
     }
 
     &--main {
@@ -22,18 +22,19 @@
         flex-direction: column;
 
         &--description {
-            color: $color-tertiary;
-            font-size: 1.8rem;
-            font-weight: 500;
+            color: #000;
+            font-size: 1.6rem;
+            font-weight: 400;
             padding: 2rem 5rem;
         }
 
         &--skills {
             position: relative;
             color: $color-tertiary;
-            padding: 3rem;
+            padding: 1rem 3rem 0 3rem;
             display: flex;
             justify-content: space-between;
+            border-top: 1px solid $color-grey;
 
             &--skill {
                 position: relative;
@@ -54,20 +55,21 @@
             &--list {
                 display: flex;
                 flex-direction: column;
+                padding-top: 1rem;
 
                 &--item {
-                    font-size: 2.1rem;
+                    font-size: 1.8rem;
                     font-weight: 400;
                     font-family: $font-heading;
 
                     &:not(:last-child) {
-                        margin-bottom: 1rem;
+                        margin-bottom: 0.5rem;
                     }
 
                     &--icon {
                         margin-right: 1rem;
                         padding-right: 1rem;
-                        border-right: 3px solid $color-tertiary;
+                        border-right: 2px solid $color-grey;
                         width: 4rem;
 
                         &-filler {
@@ -101,6 +103,9 @@
                         }
                         &-node {
                             color: #83cd29;
+                        }
+                        &-git {
+                            color: #f05133;
                         }
                     }
                 }
