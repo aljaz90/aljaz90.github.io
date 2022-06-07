@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;800&family=Sarala:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/public/css/main.css">
+    <title>Aljaz Kern (aljaz90)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="container">
+    <header class="nav">
+        <div onclick="handleLogoClick()" class="nav--section">
+            <div class="nav--item nav--item-header">
+                Aljaz Kern
+            </div>
+            <div class="nav--item nav--item-header nav--item-header-2">
+                aljaz90
+            </div>
+        </div>
+        <div class="nav--section">
+            <div class="nav--item">
+                <a href="/about.html" class="nav--item--link">
+                    About
+                </a>
+            </div>
+            <div class="nav--item">
+                <a href="/projects.html" class="nav--item--link">
+                    Projects
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="project">
+        <div class="project--tags">
+            <div class="project--tags--item">
+                React
+            </div>
+            <div class="project--tags--item">
+                Express.js
+            </div>
+            <div class="project--tags--item">
+                Sass
+            </div>
+        </div>
+        <div class="project--header">
+            <div onclick="goBack()" class="project--header--return">
+                <i class="fa-solid fa-chevron-left"></i>
+                Back
+            </div>
+            <div class="project--header--title">
+                Journey
+            </div>
+            <div class="project--header--status">
+                Completed
+            </div>
+        </div>    
+        <div class="project--main">
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Summary
+                </div>
+                <div class="project--main--section--text">
+                    I started work on Journey in the beginning of 2021. This project was my high school final project (matura project). It was supposed to help you book flights and help you find hotels, but my application for the API that would provide that data was rejected. In the end I decided to add a trip generation feature that would generate a trip in a specified country accoring to trip tags. This came with a downside as I had to enter country data and points of interest in the databse manually. xd. Nevertheless I was happy with how my project turned up.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Map page (Dashboard)
+                </div>
+                <img src="/public/img/jo-map.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    Main dashboard of the app. It contains points of interest and displays your selected trip.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Sign up page
+                </div>
+                <img src="/public/img/jo-auth.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    Basic authentication compatible with Google and Facebook's APIs. Auth features: reset password. 
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Dasboard (with a trip selected)
+                </div>
+                <img src="/public/img/jo-trip.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Trip details
+                </div>
+                <img src="/public/img/jo-details.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    This data is contained in the app's database. Data has to be entered for every point of interest manually.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Account page
+                </div>
+                <img src="/public/img/jo-acc.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                </div>                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer--section">
+            <div class="footer--section--item">
+                Made in <span class="footer--section--item--detail">2022</span> by <span class="footer--section--item--detail">Aljaz Kern</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = "/projects.html";
+        }
+        function handleLogoClick() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

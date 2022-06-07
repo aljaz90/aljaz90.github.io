@@ -81,6 +81,7 @@
             align-items: center;
             user-select: none;
             border-top-right-radius: 4px;
+            background-color: $color-info;
 
             &-development {
                 background-color: $color-success;

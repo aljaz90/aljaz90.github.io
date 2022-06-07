@@ -468,7 +468,7 @@ body {
   top: 0;
   left: 0;
   color: #fff;
-  background-color: #00E8FC;
+  background-color: #0076E5;
   font-family: "Sarala", sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
@@ -600,6 +600,7 @@ body {
   align-items: center;
   user-select: none;
   border-top-right-radius: 4px;
+  background-color: #0076E5;
 }
 .project--header--status-development {
   background-color: #27C453;
