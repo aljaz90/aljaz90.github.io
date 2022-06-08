@@ -34,9 +34,9 @@ body {
     overflow-x: hidden;
 
     @include respond(small-desktop) { 
-        grid-template-rows: 7rem repeat(4 calc(calc(100% - 7rem) / 4));
+        //grid-template-rows: 7rem repeat(4 calc(calc(100% - 7rem) / 4));
     }
     @include respond(phone) { 
-        grid-template-rows: 7rem repeat(4, min-content);
+        //grid-template-rows: 7rem repeat(4, min-content);
     }
 }

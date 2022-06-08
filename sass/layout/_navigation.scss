@@ -10,9 +10,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+        padding: 0 2rem;
+    }
+    @include respond(phone) {
+        padding: 0;
+        border-bottom: 3px solid $color-primary;
+    }
+    
     &--section {
         display: flex;
         justify-content: center;
+
+        @include respond(phone) {
+            align-items: center;
+        }
 
         &:last-child {
             border-right: 3px solid $color-primary;
@@ -29,6 +41,10 @@
 
         &:not(:last-child) {
             margin-right: 1rem;
+            
+            @include respond(phone) {
+                margin-right: 0;
+            }
         }
 
         &::after {
@@ -61,6 +77,11 @@
             user-select: none;
             cursor: pointer;
             border-bottom: none;
+
+            @include respond(phone) {
+                border-right: none;
+                letter-spacing: unset;
+            }
 
             &:hover::after {
                height: 0;

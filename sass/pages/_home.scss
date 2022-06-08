@@ -10,11 +10,24 @@
         align-items: flex-start;
         justify-content: center;
 
+        @include respond(tab-port) {
+            grid-column: full-start / full-end;
+            padding-left: 0;
+            align-items: center;
+        }
+
         &--introduction {
             font-family: $font-primary;
             font-weight: 100;
             font-size: 9.2rem;
             border-bottom: 5px solid $color-primary;
+
+            @include respond(tab-port) {
+                font-size: 6rem;
+            }
+            @include respond(phone) {
+                font-size: 4rem;
+            }
         }
 
         &--role {
@@ -30,6 +43,15 @@
             font-size: 500;
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
+
+            @include respond(tab-port) {
+                padding: 0 10rem;
+                margin-top: 2rem;
+            }
+            @include respond(phone) {
+                font-size: 1.8rem;
+                padding: 0 3rem;
+            }
     
             &--link, &--link:link, &--link:visited {
                 margin: 0 1rem;
@@ -40,6 +62,15 @@
                 border: 3px solid $color-primary;
                 border-radius: 8px;
                 transition: all .3s ease-out;
+
+                @include respond(tab-port) {
+                    padding: 0.2rem 1rem;
+                    display: inline-block;
+                }
+                @include respond(phone) {
+                    padding: 0rem 1rem;
+                    margin: 0.5rem 1rem;
+                }
 
                 &:hover {
                     background-color: $color-primary;
@@ -55,6 +86,11 @@
         display: flex;
         align-items: flex-start;
         padding-left: 5rem;
+
+        @include respond(phone) {
+            justify-content: center;
+            padding-left: 0;
+        }
 
         &--item {
             color: $color-grey;
