@@ -397,6 +397,18 @@ body {
   flex-direction: column;
   padding: 2rem 5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .about {
+    grid-column: full-start/full-end;
+    margin: 15rem 5rem 0 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about {
+    margin: 10rem 0 0 0;
+    padding: 2rem;
+  }
+}
 .about--header {
   color: #001220;
   font-family: "Sarala", sans-serif;
@@ -413,6 +425,17 @@ body {
   font-weight: 400;
   padding: 2rem 5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .about--main--description {
+    font-size: 1.9rem;
+    padding: 2rem 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about--main--description {
+    padding: 2rem 0;
+  }
+}
 .about--main--skills {
   position: relative;
   color: #001220;
@@ -421,10 +444,21 @@ body {
   justify-content: space-between;
   border-top: 1px solid #eee;
 }
+@media only screen and (max-width: 37.5em) {
+  .about--main--skills {
+    padding: 1rem 2rem 0 2rem;
+    flex-direction: column;
+  }
+}
 .about--main--skills--skill {
   position: relative;
   flex-grow: 1;
   padding-top: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .about--main--skills--skill:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
 .about--main--skills--header {
   color: #001220;
@@ -435,6 +469,11 @@ body {
   left: 0;
   top: 0;
 }
+@media only screen and (max-width: 56.25em) {
+  .about--main--skills--header {
+    font-size: 2.4rem;
+  }
+}
 .about--main--skills--list {
   display: flex;
   flex-direction: column;
@@ -444,6 +483,11 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Sarala", sans-serif;
+}
+@media only screen and (max-width: 56.25em) {
+  .about--main--skills--list--item {
+    font-size: 2.1rem;
+  }
 }
 .about--main--skills--list--item:not(:last-child) {
   margin-bottom: 0.5rem;

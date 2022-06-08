@@ -9,6 +9,15 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 5rem;
+
+    @include respond(tab-port) {
+        grid-column: full-start / full-end;
+        margin: 15rem 5rem 0 5rem;
+    }
+    @include respond(phone) {
+        margin: 10rem 0 0 0;
+        padding: 2rem;
+    }
     
     &--header {
         color: $color-tertiary;
@@ -26,6 +35,14 @@
             font-size: 1.6rem;
             font-weight: 400;
             padding: 2rem 5rem;
+
+            @include respond(tab-port) {
+                font-size: 1.9rem;
+                padding: 2rem 1rem;
+            }
+            @include respond(phone) {
+                padding: 2rem 0;
+            }
         }
 
         &--skills {
@@ -36,10 +53,21 @@
             justify-content: space-between;
             border-top: 1px solid $color-grey;
 
+            @include respond(phone) {
+                padding: 1rem 2rem 0 2rem;
+                flex-direction: column;
+            }
+
             &--skill {
                 position: relative;
                 flex-grow: 1;
                 padding-top: 4rem;
+
+                @include respond(phone) {
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
             }
 
             &--header {
@@ -50,6 +78,10 @@
                 position: absolute;
                 left: 0;
                 top: 0;
+
+                @include respond(tab-port) {
+                    font-size: 2.4rem;
+                }
             }
 
             &--list {
@@ -61,6 +93,10 @@
                     font-size: 1.8rem;
                     font-weight: 400;
                     font-family: $font-heading;
+
+                    @include respond(tab-port) {
+                        font-size: 2.1rem;
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 0.5rem;
