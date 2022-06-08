@@ -11,6 +11,19 @@
     padding: 0 0 2rem 0;
     position: relative;
 
+    @include respond(small-desktop) {
+        grid-column: full-start / full-end;
+        margin: 15rem 10rem 0 10rem;
+    }
+    @include respond(tab-port) {
+        margin: 15rem 5rem 0 5rem;
+    }
+    @include respond(phone) {
+        margin: 17rem 0 0 0;
+        padding: 0 1rem;
+        border-radius: 0;
+    }
+
     &--links {
         position: absolute;
         top: 0;
@@ -18,6 +31,14 @@
         transform: translate(calc(100% + 1rem), 0);
         display: flex;
         flex-direction: column;
+        
+        @include respond(small-desktop) {
+            transform: translate(0, 8rem);
+            z-index: 1;
+        }
+        @include respond(phone) {
+            transform: translate(-0.5rem, 0.5rem);            
+        }
 
         &--item {
             color: $color-grey;
@@ -29,6 +50,25 @@
             border-radius: 4px;
             transition: all .3s ease-out;
             user-select: none;
+
+            @include respond(small-desktop) {
+                z-index: 1;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            @include respond(phone) {
+                border-radius: 50%;
+                padding: 0;
+                width: 7rem;
+                height: 7rem;
+                justify-content: center;
+
+                i {
+                    font-size: 2.4rem; 
+                    margin-right: 0 !important;           
+                }
+            }
+            
 
             &:hover {
                 background-color: $color-grey;
@@ -42,6 +82,10 @@
                 font-size: 1.6rem;
                 font-weight: 800;
                 user-select: none;
+
+                @include respond(phone) {
+                    font-size: 0;            
+                }
             }
 
             &-important:link, &-important:visited {
@@ -108,6 +152,12 @@
         display: flex;
         flex-direction: column;
 
+        @include respond(small-desktop) {
+            z-index: 1;
+            transform: translate(4rem, 8rem);
+            flex-direction: row;
+        }
+
         &--item {
             font-size: 1.6rem;
             font-weight: 600;
@@ -119,8 +169,17 @@
             user-select: none;
             box-shadow: 0.2rem 0.1rem 2rem 0.1rem $color-primary;
 
+            @include respond(small-desktop) {
+                box-shadow: none;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 1rem;
+
+                @include respond(small-desktop) {
+                    margin-bottom: 0;
+                    margin-right: 0.5rem;
+                }
             }
         }
     }
@@ -136,6 +195,13 @@
         position: relative;
         min-height: 6rem;
         padding: 0 5rem;
+
+        @include respond(small-desktop) {
+            margin-bottom: 3rem;
+        }
+        @include respond(phone) {
+            padding: 0 0.5rem;
+        }
 
         &--title {
             position: absolute;
@@ -172,6 +238,13 @@
             border-top-right-radius: 4px;
             background-color: $color-info;
 
+            @include respond(phone) {
+                transform: translate(0, -100%);
+                width: 100vw;
+                border-top-left-radius: 4px;
+                left: -1rem;
+            }
+
             &-development {
                 background-color: $color-success;
             }
@@ -186,6 +259,10 @@
         flex-direction: column;
         padding: 0 4rem;
         padding-top: 4rem;
+
+        @include respond(phone) {
+            padding: 4rem 0.5rem 0 0.5rem;
+        }
 
         &--section {
             color: $color-grey-4;
