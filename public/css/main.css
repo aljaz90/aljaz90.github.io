@@ -546,11 +546,33 @@ body {
   flex-direction: column;
   padding: 2rem 5rem;
 }
+@media only screen and (max-width: 112.5em) {
+  .projects {
+    grid-column: full-start/full-end;
+    margin: 15rem 10rem 0 10rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .projects {
+    margin: 15rem 5rem 0 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .projects {
+    margin: 10rem 0 0 0;
+    padding: 2rem 1rem;
+  }
+}
 .projects--header {
   color: #002f53;
   font-family: "Sarala", sans-serif;
   font-size: 2.8rem;
   border-bottom: 1px solid #eee;
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--header {
+    font-size: 2.4rem;
+  }
 }
 .projects--main {
   display: flex;
@@ -564,11 +586,23 @@ body {
   transition: all 0.3s ease-out;
   position: relative;
 }
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project {
+    flex-direction: column;
+  }
+}
 .projects--main--project:hover {
   background-color: #f4f4f4;
 }
 .projects--main--project:not(:last-child) {
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project:not(:last-child) {
+    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    border-bottom: 2px solid #001220;
+  }
 }
 .projects--main--project--status {
   position: absolute;
@@ -583,6 +617,12 @@ body {
   border-radius: 4px;
   transform: rotate(-30deg) translate(-2rem, -1rem);
 }
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--status {
+    font-size: 2.1rem;
+    transform: rotate(-10deg) translate(-0.5rem, 0rem);
+  }
+}
 .projects--main--project--status-development {
   background-color: #27C453;
 }
@@ -593,8 +633,31 @@ body {
   height: 20rem;
   margin-right: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .projects--main--project--image {
+    height: 12rem;
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--image {
+    height: unset;
+    width: calc(100vw - 2rem);
+    margin-right: 0;
+  }
+}
 .projects--main--project--image-cm {
   margin-right: 11rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .projects--main--project--image-cm {
+    margin-right: 6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--image-cm {
+    margin-right: 0;
+  }
 }
 .projects--main--project--title {
   font-size: 2.8rem;
@@ -607,6 +670,12 @@ body {
   max-width: 40%;
   padding-top: 2rem;
   padding-right: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--details {
+    max-width: unset;
+    width: calc(100vw - 2rem);
+  }
 }
 .projects--main--project--details--tags {
   display: flex;
@@ -622,6 +691,11 @@ body {
   border-radius: 3.14rem;
   padding: 0.25rem 1.25rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--details--tags--item {
+    font-size: 1.6rem;
+  }
+}
 .projects--main--project--details--tags--item:not(:last-child) {
   margin-right: 0.5rem;
 }
@@ -629,6 +703,11 @@ body {
   margin-top: 1rem;
   font-size: 1.6rem;
   font-weight: 400;
+}
+@media only screen and (max-width: 37.5em) {
+  .projects--main--project--details--description {
+    font-size: 1.9rem;
+  }
 }
 
 .project {
