@@ -486,6 +486,9 @@ body {
   height: 20rem;
   margin-right: 2rem;
 }
+.projects--main--project--image-cm {
+  margin-right: 11rem;
+}
 .projects--main--project--title {
   font-size: 2.8rem;
   font-family: "Sarala", sans-serif;
@@ -533,6 +536,84 @@ body {
   flex-direction: column;
   padding: 0 0 2rem 0;
   position: relative;
+}
+.project--links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% + 1rem), 0);
+  display: flex;
+  flex-direction: column;
+}
+.project--links--item {
+  color: #eee;
+  background-color: #fff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+  user-select: none;
+}
+.project--links--item:hover {
+  background-color: #eee;
+  transform: translateX(0.5rem);
+}
+.project--links--item:link, .project--links--item:visited {
+  color: #001220;
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 800;
+  user-select: none;
+}
+.project--links--item-important:link, .project--links--item-important:visited {
+  color: #fff;
+  background-color: #0076E5;
+}
+.project--links--item-important:hover {
+  background-color: #0069cc;
+}
+.project--links--item-disabled {
+  cursor: not-allowed;
+  color: #fff;
+  background-color: #0076E5 !important;
+  position: relative;
+  opacity: 0.7;
+}
+.project--links--item-disabled::after {
+  content: "Available soon";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 1rem));
+  width: 80%;
+  background-color: #fff;
+  color: #001220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.project--links--item-disabled:hover {
+  background-color: #0076E5;
+  transform: translate(0);
+}
+.project--links--item-disabled:hover::after {
+  opacity: 1;
+}
+.project--links--item-disabled:active {
+  pointer-events: none;
+  user-select: none;
+}
+.project--links--item i {
+  margin-right: 1rem;
 }
 .project--tags {
   position: absolute;

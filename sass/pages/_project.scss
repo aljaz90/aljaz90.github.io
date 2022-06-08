@@ -11,6 +11,95 @@
     padding: 0 0 2rem 0;
     position: relative;
 
+    &--links {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(calc(100% + 1rem), 0);
+        display: flex;
+        flex-direction: column;
+
+        &--item {
+            color: $color-grey;
+            background-color: $color-white;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 4px;
+            transition: all .3s ease-out;
+            user-select: none;
+
+            &:hover {
+                background-color: $color-grey;
+                transform: translateX(0.5rem);
+            }
+
+            &:link, &:visited {
+                color: $color-tertiary;
+                font-family: $font-primary;
+                text-decoration: none;
+                font-size: 1.6rem;
+                font-weight: 800;
+                user-select: none;
+            }
+
+            &-important:link, &-important:visited {
+                color: $color-white;
+                background-color: $color-info;
+            }
+
+            &-important:hover {
+                background-color: darken($color-info, 5%);
+            }
+
+            &-disabled {
+                cursor: not-allowed;
+                color: $color-white;
+                background-color: $color-info !important;
+                position: relative;
+                opacity: 0.7;
+            }
+
+            &-disabled::after {
+                content: "Available soon";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, calc(100% + 1rem));
+                width: 80%;
+                background-color: $color-white;
+                color: $color-tertiary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                opacity: 0;
+                transition: all .3s ease-out;
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            &-disabled:hover {
+                background-color: $color-info;
+                transform: translate(0);
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &-disabled:active {
+                pointer-events:none;
+                user-select: none;
+            }
+
+            i {
+                margin-right: 1rem;
+            }
+        }
+    }
+
     &--tags {
         position: absolute;
         top: 0;
