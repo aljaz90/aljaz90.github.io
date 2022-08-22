@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;800&family=Sarala:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/public/css/main.css">
+    <title>MongoDB Transporter - Aljaz Kern (aljaz90)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="container">
+    <header class="nav">
+        <div onclick="handleLogoClick()" class="nav--section">
+            <div class="nav--item nav--item-header">
+                Aljaz Kern
+            </div>
+            <div class="nav--item nav--item-header nav--item-header-2">
+                aljaz90
+            </div>
+        </div>
+        <div class="nav--section">
+            <div class="nav--item">
+                <a href="/about.html" class="nav--item--link">
+                    About
+                </a>
+            </div>
+            <div class="nav--item">
+                <a href="/projects.html" class="nav--item--link">
+                    Projects
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="project">
+        <div class="project--links">
+            <a href="https://github.com/aljaz90/MongoDB-Transporter" target="_blank" class="project--links--item">
+                <i class="fa-brands fa-github"></i>
+                Visit project page
+            </a>
+        </div>
+        <div class="project--tags">
+            <div class="project--tags--item">
+                Javascript
+            </div>
+            <div class="project--tags--item">
+                Express.js
+            </div>
+            <div class="project--tags--item">
+                Sass
+            </div>
+        </div>
+        <div class="project--header">
+            <div onclick="goBack()" class="project--header--return">
+                <i class="fa-solid fa-chevron-left"></i>
+                Back
+            </div>
+            <div class="project--header--title">
+                MongoDB Transporter
+            </div>
+            <div class="project--header--status project--header--status-improvements">
+                Will be updated
+            </div>
+        </div>    
+        <div class="project--main">
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Summary
+                </div>
+                <div class="project--main--section--text">
+                    MongoDB Transporter is a Javascript application running on Node.js with a Web GUI used for exporting, importing, and backuping MongoDB databases.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Web GUI (Dashboard)
+                </div>
+                <img src="/public/img/mt-dashboard.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    Main dashboard of the app. It enables you to connect to your MongoDB instance, and to select which database you want to export.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Web GUI (Export popup)
+                </div>
+                <img src="/public/img/mt-export.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    Here you can select which collections you want to include in the database export. Databases are exported into a .json file.
+                </div>                
+            </div>
+            <div class="project--main--section">
+                <div class="project--main--section--title">
+                    Web GUI (Import popup)
+                </div>
+                <img src="/public/img/mt-import.png" class="project--main--section--img" />
+                <div class="project--main--section--text">
+                    Here you can import databases previously exported with this tool. You can select whether you want to append documents to existing collections or overwrite collections with the importing file.
+                </div>                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer--section">
+            <div class="footer--section--item">
+                Made in <span class="footer--section--item--detail">2022</span> by <span class="footer--section--item--detail">Aljaz Kern</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = "/projects.html";
+        }
+        function handleLogoClick() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
